@@ -1,0 +1,83 @@
+{
+    "common": {
+        "name":                     "phantomjs",
+        "version":                  "0.0.1",
+        "title":                    "Screenshot with PhantomJS",
+        "authors": [
+            "bluefox <dogafox@gmail.com>"
+        ],
+        "desc": {
+            "en": "Get web page screenshot (e.g. for flot)",
+            "de": "Get web page screenshot (e.g. for flot)",
+            "ru": "Get web page screenshot (e.g. for flot)"
+        },
+        "platform":                 "Javascript/Node.js",
+        "mode":                     "daemon",
+        "loglevel":                 "info",
+        "icon":                     "phantomjs.png",
+        "extIcon":                  "https://raw.githubusercontent.com/ioBroker/ioBroker.phantomjs/master/admin/phantomjs.png",
+        "keywords":                 ["js", "phantomjs"],
+        "readme":                   "https://github.com/iobroker/ioBroker.phantomjs/blob/master/README.md",
+        "license":                  "Apache 2.0",
+        "type":                     "visualisation",
+        "noConfig":                 true,
+        "messagebox":               true,
+        "subscribe":                "messagebox"
+    },
+    "native": {
+    },
+    "instanceObjects": [
+        {
+            "_id":  "filename",
+            "type": "state",
+            "common": {
+                "role":  "text",
+                "name":  "file name where the picture must be created",
+                "type":  "string",
+                "read":  true,
+                "write": true,
+                "def":   "picture.png"
+            },
+            "native": {}
+        },
+        {
+            "_id":  "url",
+            "type": "state",
+            "common": {
+                "role":  "text",
+                "name":  "Url that must be generated",
+                "type":  "string",
+                "read":  true,
+                "write": true,
+                "def":   ""
+            },
+            "native": {}
+        },
+        {
+            "_id":  "width",
+            "type": "state",
+            "common": {
+                "role":  "state",
+                "name":  "Width of screenshot in px",
+                "type":  "number",
+                "read":  true,
+                "write": true,
+                "def":   800
+            },
+            "native": {}
+        },
+        {
+            "_id":  "height",
+            "type": "state",
+            "common": {
+                "role":  "state",
+                "name":  "Height of screenshot in px",
+                "type":  "number",
+                "read":  true,
+                "write": true,
+                "def":   600
+            },
+            "native": {}
+        }
+    ]
+}
