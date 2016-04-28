@@ -7,7 +7,7 @@
     "bluefox <dogafox@gmail.com>"
   ],
   "homepage": "https://github.com/ioBroker/ioBroker.phantomjs",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "keywords": [
     "ioBroker",
     "screenshot",

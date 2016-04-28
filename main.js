@@ -84,8 +84,8 @@ function getFileName(newName) {
 }
 
 function render(options, callback) {
-    adapter.log.info('Create "' + url + '"');
-    adapter.log.info('and save to "' + output + '"');
+    adapter.log.info('Create "' + options.url + '"');
+    adapter.log.info('and save to "' + options.output + '"');
 
     cp.execFile(phantomjs.path, [
         __dirname + '/lib/rasterize.js',
