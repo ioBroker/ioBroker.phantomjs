@@ -6,7 +6,7 @@ var utils     = require(__dirname + '/lib/utils'); // Get common adapter utils
 var path      = require('path');
 var fs        = require('fs');
 var cp        = require('child_process');
-var phantomjs = require('phantomjs');
+var phantomjs = require('phantomjs-prebuilt');
 
 var fileName;
 var width;

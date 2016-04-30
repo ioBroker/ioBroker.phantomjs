@@ -48,7 +48,7 @@ you can create a screen shot of some URL. Only **url** field is mandatory all ot
 
 
 ## Changelog
-### 0.1.1 (2016-04-30)
+### 0.1.2 (2016-04-30)
 * (bluefox) change package name from phantomjs to phantomjs-prebuilt
 
 ### 0.1.0 (2016-04-30)
