@@ -1,6 +1,6 @@
 {
   "name": "iobroker.phantomjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Javascript/Coffescript Script Engine for ioBroker",
   "author": "bluefox <dogafox@gmail.com>",
   "contributors": [
@@ -18,7 +18,7 @@
     "url": "https://github.com/ioBroker/ioBroker.phantomjs"
   },
   "dependencies": {
-    "phantomjs": "^2.1.7"
+    "phantomjs-prebuilt": "^2.1.7"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
