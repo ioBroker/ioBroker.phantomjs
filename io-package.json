@@ -1,7 +1,7 @@
 {
     "common": {
         "name":                     "phantomjs",
-        "version":                  "0.0.1",
+        "version":                  "0.1.0",
         "title":                    "Screenshot with PhantomJS",
         "authors": [
             "bluefox <dogafox@gmail.com>"
@@ -77,6 +77,53 @@
                 "read":  true,
                 "write": true,
                 "def":   600
+            },
+            "native": {}
+        },
+        {
+            "_id":  "renderTime",
+            "type": "state",
+            "common": {
+                "role":  "state",
+                "name":  "Interval in ms to wait till the page will be rendered",
+                "type":  "number",
+                "read":  true,
+                "write": true,
+                "def":   2000
+            },
+            "native": {}
+        },
+        {
+            "_id":  "working",
+            "type": "state",
+            "common": {
+                "role":  "state",
+                "name":  "If rendering",
+                "type":  "boolean",
+                "read":  true,
+                "write": false,
+                "def":   false
+            },
+            "native": {}
+        },
+        {
+            "_id":  "online",
+            "type": "state",
+            "common": {
+                "role":  "state",
+                "name":  "If requested URL picture must be uploaded to internal web server.",
+                "type":  "boolean",
+                "read":  true,
+                "write": true,
+                "def":   false
+            },
+            "native": {}
+        },
+        {
+            "_id":  "pictures",
+            "type": "channel",
+            "common": {
+                "name":  "Rendered pictures"
             },
             "native": {}
         }
