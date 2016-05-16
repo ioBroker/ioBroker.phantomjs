@@ -14,6 +14,13 @@ User can later send this file in email or per telegram or whatever.
 
 Slow web clients can display the charts if the charts will be automatically generated every x minutes.
 
+## Prerequire
+It is used prebuild package of phantomjs. If for your system the prebuild does not exist, you cannot use this adapter. 
+On some linux systems the additional library "libfontconfig" is required. It can be installed as follow:
+```
+sudo apt-get install libfontconfig
+```
+
 ## Usage
 There are two ways how to create images.
 
