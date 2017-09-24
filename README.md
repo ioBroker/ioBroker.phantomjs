@@ -1,5 +1,6 @@
 ![Logo](admin/phantomjs.png)
 # ioBroker.phantomjs
+
 ====================
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.phantomjs.svg)](https://www.npmjs.com/package/iobroker.phantomjs)
@@ -29,6 +30,7 @@ By creation of the instance for states will be created:
 - **filename** - file name, where the picture will be saved. If path is not absolute, it will be relative to ```.../iobroker/node_modules/iobroker.phantomjs```
 - **width** - width of the picture. Default value 800px
 - **height** - height of the picture. Default value 600px
+- **paging** - Format of the PDF page. File name must end with ".pdf"
 - **renderTime** - Interval in ms to wait till the page will be rendered
 - **online** - If requested URL picture must be uploaded to internal web server. It could be accessed then via http://ip:8082/state/phantomjs.0.filename_png
 - **url** - url that should be rendered. This state should be written as all other states are filled with required data.
@@ -53,8 +55,23 @@ sendTo('phantomjs.0', 'send', {
 
 you can create a screen shot of some URL. Only **url** field is mandatory all others are optional and will be filled from current settings.  
 
+### PDF Generation
+```
+sendTo('phantomjs.0', 'send', {
+    url: 'http://localhost:8082/flot/index.html?l%5B0%5D%5Bid%5D=system.adapter.admin.0.memHeapTotal&l%5B0%5D%5Boffset%5D=0&l%5B0%5D%5Bart%5D=average&l%5B0%5D%5Bcolor%5D=%23FF0000&l%5B0%5D%5Bthickness%5D=3&l%5B0%5D%5Bshadowsize%5D=3&timeArt=relative&relativeEnd=now&range=10&live=false&aggregateType=step&aggregateSpan=300&hoverDetail=false&useComma=false&zoom=false',
+    output: 'image.pdf',
+    paging: 'A4', // optional examples: "5in*7.5in", "10cm*20cm", "A4", "Letter"
+	renderTime: 10000,
+	online: true
+}, function (result) {
+    console.log(result.error + ' ' + result.output);
+});
+```
 
 ## Changelog
+### 0.1.3 (2017-09-24)
+* (bluefox) add pdf support
+
 ### 0.1.2 (2016-04-30)
 * (bluefox) change package name from phantomjs to phantomjs-prebuilt
 

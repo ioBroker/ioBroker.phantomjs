@@ -1,6 +1,6 @@
 /* jshint -W097 */// jshint strict:false
 /*jslint node: true */
-"use strict";
+'use strict';
 
 var utils     = require(__dirname + '/lib/utils'); // Get common adapter utils
 var path      = require('path');
@@ -99,22 +99,23 @@ function getFileName(newName) {
 }
 
 function render(options, callback) {
-    adapter.log.info('Create ' + options.width + 'px*' + options.height + 'px ' + ' in ' + options.timeout + 'ms - "' + options.url + '"');
+    adapter.log.info('Create ' + options.width + 'px*' + options.height + 'px ' + ' in ' + options.timeout + 'ms - "' + options.url + '" => "' + options.output + '"');
 
     adapter.setState('working', true, true);
     cp.execFile(phantomjs.path, [
         __dirname + '/lib/rasterize.js',
         options.url,
         options.output,
-        options.width + 'px*' + options.height + 'px',
+        (options.output || '').match(/\.pdf/i) ? options.paging || 'A4' : (options.width + 'px*' + options.height + 'px'),
         options.timeout + 'ms'
-    ], function(err, stdout, stderr) {
+    ], function (err, stdout, stderr) {
         adapter.setState('working', false, true);
         adapter.log.info('and save to "' + options.output + '"');
 
         if (!err && options.online) {
-            var parts = options.output.replace(/\\/g, '/').split('/');
-            var fileName = parts.pop().replace(/[\.\s]/g, '_');
+            var parts    = options.output.replace(/\\/g, '/').split('/');
+            var fileName = parts.pop().replace(/[.\s]/g, '_');
+
             try {
                 var data = fs.readFileSync(options.output);
                 adapter.getObject('pictures.' + fileName, function (err, obj) {

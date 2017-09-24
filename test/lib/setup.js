@@ -485,7 +485,7 @@ function startAdapter(objects, states, callback) {
 function startController(isStartAdapter, onObjectChange, onStateChange, callback) {
     if (typeof isStartAdapter === 'function') {
         callback = onStateChange;
-        onStateChange = onObjectChange
+        onStateChange = onObjectChange;
         onObjectChange = isStartAdapter;
         isStartAdapter = true;
     }
@@ -515,6 +515,9 @@ function startController(isStartAdapter, onObjectChange, onStateChange, callback
                 "connectTimeout": 2000
             },
             logger: {
+                silly: function (msg) {
+                    console.log(msg);
+                },
                 debug: function (msg) {
                     console.log(msg);
                 },

@@ -1,8 +1,15 @@
 {
     "common": {
         "name":                     "phantomjs",
-        "version":                  "0.1.2",
+        "version":                  "0.1.3",
         "title":                    "Screenshot with PhantomJS",
+        "news": {
+            "0.1.3": {
+                "en": "add pdf support",
+                "de": "PDF hinzugefügt",
+                "ru": "Добавлено генерирование pdf файлов"
+            }
+        },
         "authors": [
             "bluefox <dogafox@gmail.com>"
         ],
