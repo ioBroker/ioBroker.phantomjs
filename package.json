@@ -23,11 +23,11 @@
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-replace": "^1.0.1",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-jscs": "^2.8.0",
-    "grunt-http": "^2.0.1",
-    "mocha": "^2.4.5",
-    "chai": "^3.5.0"
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-jscs": "^3.0.1",
+    "grunt-http": "^2.2.0",
+    "mocha": "^3.5.3",
+    "chai": "^4.1.2"
   },
   "bugs": {
     "url": "https://github.com/ioBroker/ioBroker.phantomjs/issues"
