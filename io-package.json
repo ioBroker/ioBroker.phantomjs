@@ -1,8 +1,8 @@
 {
     "common": {
-        "name":                     "phantomjs",
-        "version":                  "0.1.3",
-        "title":                    "Screenshot with PhantomJS",
+        "name": "phantomjs",
+        "version": "0.1.3",
+        "title": "Screenshot with PhantomJS",
         "news": {
             "0.1.3": {
                 "en": "add pdf support",
@@ -18,119 +18,121 @@
             "de": "Get web page screenshot (e.g. for flot)",
             "ru": "Get web page screenshot (e.g. for flot)"
         },
-        "platform":                 "Javascript/Node.js",
-        "mode":                     "daemon",
-        "loglevel":                 "info",
-        "icon":                     "phantomjs.png",
-        "extIcon":                  "https://raw.githubusercontent.com/ioBroker/ioBroker.phantomjs/master/admin/phantomjs.png",
-        "keywords":                 ["js", "phantomjs"],
-        "readme":                   "https://github.com/iobroker/ioBroker.phantomjs/blob/master/README.md",
-        "license":                  "Apache-2.0",
-        "enabled":                  true,
-        "type":                     "visualisation",
-        "noConfig":                 true,
-        "messagebox":               true,
-        "subscribe":                "messagebox"
+        "platform": "Javascript/Node.js",
+        "mode": "daemon",
+        "loglevel": "info",
+        "icon": "phantomjs.png",
+        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.phantomjs/master/admin/phantomjs.png",
+        "keywords": [
+            "js",
+            "phantomjs"
+        ],
+        "readme": "https://github.com/iobroker/ioBroker.phantomjs/blob/master/README.md",
+        "license": "Apache-2.0",
+        "enabled": true,
+        "type": "utility",
+        "noConfig": true,
+        "messagebox": true,
+        "subscribe": "messagebox"
     },
-    "native": {
-    },
+    "native": {},
     "instanceObjects": [
         {
-            "_id":  "filename",
+            "_id": "filename",
             "type": "state",
             "common": {
-                "role":  "text",
-                "name":  "file name where the picture must be created",
-                "type":  "string",
-                "read":  true,
+                "role": "text",
+                "name": "file name where the picture must be created",
+                "type": "string",
+                "read": true,
                 "write": true,
-                "def":   "picture.png"
+                "def": "picture.png"
             },
             "native": {}
         },
         {
-            "_id":  "url",
+            "_id": "url",
             "type": "state",
             "common": {
-                "role":  "text",
-                "name":  "Url that must be generated",
-                "type":  "string",
-                "read":  true,
+                "role": "text",
+                "name": "Url that must be generated",
+                "type": "string",
+                "read": true,
                 "write": true,
-                "def":   ""
+                "def": ""
             },
             "native": {}
         },
         {
-            "_id":  "width",
+            "_id": "width",
             "type": "state",
             "common": {
-                "role":  "state",
-                "name":  "Width of screenshot in px",
-                "type":  "number",
-                "read":  true,
+                "role": "state",
+                "name": "Width of screenshot in px",
+                "type": "number",
+                "read": true,
                 "write": true,
-                "def":   800
+                "def": 800
             },
             "native": {}
         },
         {
-            "_id":  "height",
+            "_id": "height",
             "type": "state",
             "common": {
-                "role":  "state",
-                "name":  "Height of screenshot in px",
-                "type":  "number",
-                "read":  true,
+                "role": "state",
+                "name": "Height of screenshot in px",
+                "type": "number",
+                "read": true,
                 "write": true,
-                "def":   600
+                "def": 600
             },
             "native": {}
         },
         {
-            "_id":  "renderTime",
+            "_id": "renderTime",
             "type": "state",
             "common": {
-                "role":  "state",
-                "name":  "Interval in ms to wait till the page will be rendered",
-                "type":  "number",
-                "read":  true,
+                "role": "state",
+                "name": "Interval in ms to wait till the page will be rendered",
+                "type": "number",
+                "read": true,
                 "write": true,
-                "def":   2000
+                "def": 2000
             },
             "native": {}
         },
         {
-            "_id":  "working",
+            "_id": "working",
             "type": "state",
             "common": {
-                "role":  "state",
-                "name":  "If rendering",
-                "type":  "boolean",
-                "read":  true,
+                "role": "state",
+                "name": "If rendering",
+                "type": "boolean",
+                "read": true,
                 "write": false,
-                "def":   false
+                "def": false
             },
             "native": {}
         },
         {
-            "_id":  "online",
+            "_id": "online",
             "type": "state",
             "common": {
-                "role":  "state",
-                "name":  "If requested URL picture must be uploaded to internal web server.",
-                "type":  "boolean",
-                "read":  true,
+                "role": "state",
+                "name": "If requested URL picture must be uploaded to internal web server.",
+                "type": "boolean",
+                "read": true,
                 "write": true,
-                "def":   false
+                "def": false
             },
             "native": {}
         },
         {
-            "_id":  "pictures",
+            "_id": "pictures",
             "type": "channel",
             "common": {
-                "name":  "Rendered pictures"
+                "name": "Rendered pictures"
             },
             "native": {}
         }
