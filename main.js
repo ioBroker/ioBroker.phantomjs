@@ -14,7 +14,7 @@ var height;
 var renderTime;
 var online;
 
-var adapter = utils.adapter('phantomjs');
+var adapter = utils.Adapter('phantomjs');
 
 adapter.on('stateChange', function (id, state) {
     if (state && !state.ack) {
