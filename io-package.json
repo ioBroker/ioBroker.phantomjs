@@ -157,6 +157,84 @@
             "native": {}
         },
         {
+            "_id": "clipTop",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Clip top",
+                "type": "string",
+                "read": true,
+                "write": true,
+                "def": 0
+            },
+            "native": {}
+        },
+        {
+            "_id": "clipLeft",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Clip left",
+                "type": "string",
+                "read": true,
+                "write": true,
+                "def": 0
+            },
+            "native": {}
+        },
+        {
+            "_id": "clipWidth",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Clip width",
+                "type": "string",
+                "read": true,
+                "write": true,
+                "def": 0
+            },
+            "native": {}
+        },
+        {
+            "_id": "clipHeight",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Clip height",
+                "type": "string",
+                "read": true,
+                "write": true,
+                "def": 0
+            },
+            "native": {}
+        },
+        {
+            "_id": "scrollTop",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Scroll top position",
+                "type": "string",
+                "read": true,
+                "write": true,
+                "def": 0
+            },
+            "native": {}
+        },
+        {
+            "_id": "scrollLeft",
+            "type": "state",
+            "common": {
+                "role": "state",
+                "name": "Scroll left position",
+                "type": "string",
+                "read": true,
+                "write": true,
+                "def": 0
+            },
+            "native": {}
+        },
+        {
             "_id": "pictures",
             "type": "channel",
             "common": {
