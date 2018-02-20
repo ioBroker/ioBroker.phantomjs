@@ -1,7 +1,7 @@
 {
   "name": "iobroker.phantomjs",
-  "version": "0.1.3",
-  "description": "Javascript/Coffescript Script Engine for ioBroker",
+  "version": "1.0.0",
+  "description": "Make screenshots with PhantomJS",
   "author": "bluefox <dogafox@gmail.com>",
   "contributors": [
     "bluefox <dogafox@gmail.com>"
@@ -18,15 +18,11 @@
     "url": "https://github.com/ioBroker/ioBroker.phantomjs"
   },
   "dependencies": {
-    "phantomjs-prebuilt": "^2.1.15"
+    "phantomjs-prebuilt": "^2.1.16"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-replace": "^1.0.1",
-    "grunt-contrib-jshint": "^1.1.0",
-    "grunt-jscs": "^3.0.1",
-    "grunt-http": "^2.2.0",
-    "mocha": "^4.1.0",
+    "gulp": "^3.9.1",
+    "mocha": "^5.0.1",
     "chai": "^4.1.2"
   },
   "bugs": {

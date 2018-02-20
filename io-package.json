@@ -1,9 +1,31 @@
 {
     "common": {
         "name": "phantomjs",
-        "version": "0.1.3",
-        "title": "Screenshot with PhantomJS",
+        "version": "1.0.0",
+        "title": "Screenshots with PhantomJS",
+        "titleLang": {
+            "en": "Screenshots with PhantomJS",
+            "de": "Screenshot mit PhantomJS",
+            "ru": "Скриншоты с PhantomJS",
+            "pt": "Captura de tela com PhantomJS",
+            "nl": "Schermafbeelding met PhantomJS",
+            "fr": "Capture d'écran avec PhantomJS",
+            "it": "Screenshot con PhantomJS",
+            "es": "Captura de pantalla con PhantomJS",
+            "pl": "Zrzut ekranu z PhantomJS"
+        },
         "news": {
+            "1.0.0": {
+                "en": "clipping support\nIMPORTANT: paging is replaces by 'paper-xxx' options",
+                "de": "Clipping-Unterstützung\nWICHTIG: Paging wird durch \"paper-xxx\" Optionen ersetzt",
+                "ru": "поддержка отсечения\nВАЖНО: подкачка заменяется параметрами «paper-xxx»",
+                "pt": "suporte de corte\nIMPORTANTE: a paginação é substituída pelas opções 'paper-xxx'",
+                "nl": "clipping ondersteuning\nBELANGRIJK: paging is vervangen door 'paper-xxx' opties",
+                "fr": "support d'écrêtage\nIMPORTANT: la pagination est remplacée par les options 'paper-xxx'",
+                "it": "supporto per il ritaglio\nIMPORTANTE: il paging viene sostituito dalle opzioni 'paper-xxx'",
+                "es": "soporte de recorte\nIMPORTANTE: la paginación se reemplaza por opciones 'paper-xxx'",
+                "pl": "obsługa przycinania\nWAŻNE: stronicowanie zastępowane jest opcjami \"paper-xxx\""
+            },
             "0.1.3": {
                 "en": "add pdf support",
                 "de": "PDF hinzugefügt",
@@ -15,8 +37,14 @@
         ],
         "desc": {
             "en": "Get web page screenshot (e.g. for flot)",
-            "de": "Get web page screenshot (e.g. for flot)",
-            "ru": "Get web page screenshot (e.g. for flot)"
+            "de": "Holen Sie sich den Screenshot der Webseite (z. B. für Flot)",
+            "ru": "Получить скриншот веб-страницы (например, для флота)",
+            "pt": "Obtenha uma captura de tela da página da web (por exemplo, para flot)",
+            "nl": "Schermafbeelding van webpagina verkrijgen (bijvoorbeeld voor flot)",
+            "fr": "Obtenir une capture d'écran de la page Web (par exemple pour flot)",
+            "it": "Ottieni screenshot della pagina Web (ad esempio per flot)",
+            "es": "Obtenga una captura de pantalla de la página web (por ejemplo, para flot)",
+            "pl": "Zyskaj zrzut ekranu strony internetowej (np. Flot)"
         },
         "platform": "Javascript/Node.js",
         "mode": "daemon",

@@ -1,6 +1,5 @@
 ![Logo](admin/phantomjs.png)
 # ioBroker.phantomjs
-
 ====================
 
 [![NPM version](http://img.shields.io/npm/v/iobroker.phantomjs.svg)](https://www.npmjs.com/package/iobroker.phantomjs)
@@ -42,12 +41,19 @@ With the script code, like this:
 
 ```
 sendTo('phantomjs.0', 'send', {
-    url: 'http://localhost:8082/flot/index.html?l%5B0%5D%5Bid%5D=system.adapter.admin.0.memHeapTotal&l%5B0%5D%5Boffset%5D=0&l%5B0%5D%5Bart%5D=average&l%5B0%5D%5Bcolor%5D=%23FF0000&l%5B0%5D%5Bthickness%5D=3&l%5B0%5D%5Bshadowsize%5D=3&timeArt=relative&relativeEnd=now&range=10&live=false&aggregateType=step&aggregateSpan=300&hoverDetail=false&useComma=false&zoom=false',
-    output: 'image.png',
-    width: 300,
-    height: 200,
-	renderTime: 10000,
-	online: true
+    url:                    'http://localhost:8082/flot/index.html?l%5B0%5D%5Bid%5D=system.adapter.admin.0.memHeapTotal&l%5B0%5D%5Boffset%5D=0&l%5B0%5D%5Bart%5D=average&l%5B0%5D%5Bcolor%5D=%23FF0000&l%5B0%5D%5Bthickness%5D=3&l%5B0%5D%5Bshadowsize%5D=3&timeArt=relative&relativeEnd=now&range=10&live=false&aggregateType=step&aggregateSpan=300&hoverDetail=false&useComma=false&zoom=false',
+    output:                 'picture.png',  // default value
+    width:                  800,            // default value
+    height:                 600,            // default value
+	timeout:                2000,           // default value
+	zoom:                   1,              // default value
+	
+	'clip-top':             0,              // default value
+	'clip-left':            0,              // default value
+	'clip-width':           800,            // default value
+	'clip-height':          600,            // default value
+
+	online:                 false           // default value
 }, function (result) {
     console.log(result.error + ' ' + result.output);
 });
@@ -58,17 +64,29 @@ you can create a screen shot of some URL. Only **url** field is mandatory all ot
 ### PDF Generation
 ```
 sendTo('phantomjs.0', 'send', {
-    url: 'http://localhost:8082/flot/index.html?l%5B0%5D%5Bid%5D=system.adapter.admin.0.memHeapTotal&l%5B0%5D%5Boffset%5D=0&l%5B0%5D%5Bart%5D=average&l%5B0%5D%5Bcolor%5D=%23FF0000&l%5B0%5D%5Bthickness%5D=3&l%5B0%5D%5Bshadowsize%5D=3&timeArt=relative&relativeEnd=now&range=10&live=false&aggregateType=step&aggregateSpan=300&hoverDetail=false&useComma=false&zoom=false',
-    output: 'image.pdf',
-    paging: 'A4', // optional examples: "5in*7.5in", "10cm*20cm", "A4", "Letter"
-	renderTime: 10000,
-	online: true
+    url:                    'http://localhost:8082/flot/index.html?l%5B0%5D%5Bid%5D=system.adapter.admin.0.memHeapTotal&l%5B0%5D%5Boffset%5D=0&l%5B0%5D%5Bart%5D=average&l%5B0%5D%5Bcolor%5D=%23FF0000&l%5B0%5D%5Bthickness%5D=3&l%5B0%5D%5Bshadowsize%5D=3&timeArt=relative&relativeEnd=now&range=10&live=false&aggregateType=step&aggregateSpan=300&hoverDetail=false&useComma=false&zoom=false',
+    output:                 'image.pdf',
+    
+    'paper-format':         'A4',           // 'A3', 'A4', 'A5', 'Legal', 'Letter', 'Tabloid': should be used 'paper-format', 'paper-orientation', 'paper-margin' 
+    'paper-orientation':    'portrait',     // 'portrait', 'landscape'
+    'paper-margin':         '1cm',
+
+    'paper-width':          200,            // '5in',   '10cm': should be used 'paper-width', 'paper-height', 'paper-margin'
+    'paper-height':         300,            // '7.5in', '20cm'
+
+	timeout:                2000            // default value
 }, function (result) {
     console.log(result.error + ' ' + result.output);
 });
 ```
 
+Supported dimension units are: 'mm', 'cm', 'in', 'px'. No unit means 'px'.
+
 ## Changelog
+### 1.0.0 (2018-02-19)
+* (bluefox) clipping support
+* (bluefox) IMPORTANT: paging is replaces by 'paper-xxx' options.
+
 ### 0.1.3 (2017-09-24)
 * (bluefox) add pdf support
 
@@ -83,7 +101,7 @@ sendTo('phantomjs.0', 'send', {
 * (bluefox) initial commit
 
 ## License
-Copyright 2016-2017 bluefox <dogafox@gmail.com>.
+Copyright 2016-2018 bluefox <dogafox@gmail.com>.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

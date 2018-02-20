@@ -53,9 +53,7 @@ adapter.on('stateChange', function (id, state) {
     }
 });
 
-adapter.on('ready', function () {
-    main();
-});
+adapter.on('ready', main);
 
 adapter.on('message', function (msg) {
     processMessage(msg);
@@ -66,23 +64,15 @@ process.on('uncaughtException', function(err) {
 });
 
 function processMessage(msg) {
-    if (msg.command == 'send') {
-
-        var options = {
-            url:         msg.message.url || '',
-            output:      getFileName(msg.message.output || fileName),
-            width:       msg.message.width      ? parseInt(msg.message.width,      10) || 800  : width,
-            height:      msg.message.height     ? parseInt(msg.message.height,     10) || 600  : height,
-            timeout:     msg.message.renderTime ? parseInt(msg.message.renderTime, 10) || 2000 : renderTime,
-            online:      (msg.message.online !== undefined) ? (msg.message.online === 1 || msg.message.online === '1' || msg.message.online === 'true' || msg.message.online === true) : online
-        };
-
+    if (msg.command === 'send') {
         setTimeout(function () {
-            render(options, function (err, stdout, stderr) {
+            render(msg.message, function (err, stdout, stderr) {
                 if (err) adapter.log.error(err);
+                if (stderr) adapter.log.error(stderr);
+
                 if (msg.callback) {
-                    options.error = err;
-                    adapter.sendTo(msg.from, msg.command, options, msg.callback);
+                    msg.message.error = err;
+                    adapter.sendTo(msg.from, msg.command, msg.message, msg.callback);
                 }
             });
         }, 0);
@@ -99,18 +89,44 @@ function getFileName(newName) {
 }
 
 function render(options, callback) {
-    adapter.log.info('Create ' + options.width + 'px*' + options.height + 'px ' + ' in ' + options.timeout + 'ms - "' + options.url + '" => "' + options.output + '"');
+    // var options = {
+    //     url:        state.val,
+    //     output:     fileName,
+    //     width:      width,
+    //     height:     height,
+    //     timeout:    renderTime,
+    //     online:     online
+    // };
 
     adapter.setState('working', true, true);
-    cp.execFile(phantomjs.path, [
-        __dirname + '/lib/rasterize.js',
-        options.url,
-        options.output,
-        (options.output || '').match(/\.pdf/i) ? options.paging || 'A4' : (options.width + 'px*' + options.height + 'px'),
-        options.timeout + 'ms'
-    ], function (err, stdout, stderr) {
+
+    options.output = getFileName(options.output || fileName);
+
+    // compatibility
+    if (options.renderTime && !options.timeout) options.timeout = options.renderTime;
+
+    adapter.log.info('Create ' + options.width + 'px*' + options.height + 'px in ' + options.timeout + 'ms - "' + options.url + '" => "' + options.output + '"');
+
+    // generate command
+    var cmd = [__dirname + '/lib/rasterize.js'];
+    for (var attr in options) {
+        if (options.hasOwnProperty(attr) && attr !== 'online') {
+            if (attr === 'output') {
+                cmd.push('--' + attr);
+                cmd.push('"' + options[attr].replace(/\\/g, '/') + '"');
+            } else {
+                cmd.push('--' + attr);
+                cmd.push(options[attr]);
+            }
+        }
+    }
+
+    adapter.log.debug(cmd.join(' '));
+
+    cp.execFile(phantomjs.path, cmd, function (err, stdout, stderr) {
         adapter.setState('working', false, true);
-        adapter.log.info('and save to "' + options.output + '"');
+        adapter.log.debug('and save to "' + options.output + '"');
+        adapter.log.debug(stdout);
 
         if (!err && options.online) {
             var parts    = options.output.replace(/\\/g, '/').split('/');
