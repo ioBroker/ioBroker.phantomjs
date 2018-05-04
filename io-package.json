@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "phantomjs",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "title": "Screenshots with PhantomJS",
         "titleLang": {
             "en": "Screenshots with PhantomJS",
@@ -15,6 +15,17 @@
             "pl": "Zrzut ekranu z PhantomJS"
         },
         "news": {
+            "1.0.1": {
+                "en": "Problem with page size fixed",
+                "de": "Problem mit der Seitengröße behoben",
+                "ru": "Проблема с фиксированным размером страницы",
+                "pt": "Problema com o tamanho da página corrigido",
+                "nl": "Probleem met paginaformaat opgelost",
+                "fr": "Problème avec la taille de la page fixée",
+                "it": "Problema con le dimensioni della pagina corrette",
+                "es": "Problema con el tamaño de página fijo",
+                "pl": "Problem z poprawionym rozmiarem strony"
+            },
             "1.0.0": {
                 "en": "clipping support\nIMPORTANT: paging is replaces by 'paper-xxx' options",
                 "de": "Clipping-Unterstützung\nWICHTIG: Paging wird durch \"paper-xxx\" Optionen ersetzt",

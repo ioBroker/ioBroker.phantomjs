@@ -116,6 +116,9 @@ Supported dimension units are: 'mm', 'cm', 'in', 'px'. No unit means 'px'.
 You can read more about phantomJS [here](http://phantomjs.org/api/webpage/property/paper-size.html).
 
 ## Changelog
+### 1.0.1 (2018-05-04)
+* (bluefox) Problem with page size fixed
+
 ### 1.0.0 (2018-02-19)
 * (bluefox) clipping support
 * (bluefox) IMPORTANT: paging is replaces by 'paper-xxx' options.
