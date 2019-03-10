@@ -2,7 +2,7 @@
 # ioBroker.phantomjs
 ====================
 
-[![NPM version](http://img.shields.io/npm/v/iobroker.phantomjs.svg)](https://www.npmjs.com/package/iobroker.phantomjs)
+![Number of Installations](http://iobroker.live/badges/phantomjs-installed.svg) ![Number of Installations](http://iobroker.live/badges/phantomjs-stable.svg) [![NPM version](http://img.shields.io/npm/v/iobroker.phantomjs.svg)](https://www.npmjs.com/package/iobroker.phantomjs)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.phantomjs.svg)](https://www.npmjs.com/package/iobroker.phantomjs)
 [![Tests](https://travis-ci.org/ioBroker/ioBroker.phantomjs.svg?branch=master)](https://travis-ci.org/ioBroker/ioBroker.phantomjs)
 
