@@ -53,7 +53,7 @@ describe('phantomjs: Test UDP server', function() {
     });
 
     it('phantomjs: create picture of google.com', function (done) {
-        this.timeout(20000);
+        this.timeout(30000);
         states.setState('phantomjs.0.filename', {val: 'image.png', ack: false}, function (err) {
             expect(err).to.be.not.ok;
             states.setState('phantomjs.0.width', {val: 400, ack: false}, function (err) {
@@ -85,7 +85,7 @@ describe('phantomjs: Test UDP server', function() {
                                             });
                                         });
                                     });
-                                }, 6000);
+                                }, 10000);
                             });
                         });
                     });
