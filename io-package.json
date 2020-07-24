@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "phantomjs",
-        "version": "1.0.1",
+        "version": "1.1.0",
         "title": "Screenshots with PhantomJS",
         "titleLang": {
             "en": "Screenshots with PhantomJS",
@@ -15,6 +15,18 @@
             "pl": "Zrzut ekranu z PhantomJS"
         },
         "news": {
+            "1.1.0": {
+                "en": "libfontconfig automatically installed , invalid/self signed certificates are ignored",
+                "de": "libfontconfig wird automatisch installiert, ungültige / selbstsignierte Zertifikate werden ignoriert",
+                "ru": "libfontconfig автоматически устанавливается, недействительные / самозаверяющие сертификаты игнорируются",
+                "pt": "libfontconfig instalado automaticamente, certificados inválidos / autoassinados são ignorados",
+                "nl": "libfontconfig automatisch geïnstalleerd, ongeldige / zelfondertekende certificaten worden genegeerd",
+                "fr": "libfontconfig installé automatiquement, les certificats non valides / auto-signés sont ignorés",
+                "it": "libfontconfig installato automaticamente, i certificati non validi / autofirmati vengono ignorati",
+                "es": "libfontconfig se instala automáticamente, los certificados inválidos / autofirmados se ignoran",
+                "pl": "libfontconfig zainstalowana automatycznie, nieprawidłowe / podpisane samodzielnie certyfikaty są ignorowane",
+                "zh-cn": "libfontconfig自动安装，无效/自签名证书被忽略"
+            },
             "1.0.1": {
                 "en": "Problem with page size fixed",
                 "de": "Problem mit der Seitengröße behoben",
@@ -72,7 +84,12 @@
         "type": "utility",
         "noConfig": true,
         "messagebox": true,
-        "subscribe": "messagebox"
+        "subscribe": "messagebox",
+        "osDependencies": {
+            "linux": [
+                "libfontconfig"
+            ]
+        }
     },
     "native": {},
     "instanceObjects": [

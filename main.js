@@ -9,18 +9,19 @@ var cp        = require('child_process');
 var phantomjs = require('phantomjs-prebuilt');
 
 var settings = {
-    output:         '',
-    width:          800,
-    height:         600,
-    timeout:        2000,
-    online:         false,
-    'clip-top':     0,
-    'clip-left':    0,
-    'clip-width':   800,
-    'clip-height':  600,
-    'scroll-top':   0,
-    'scroll-left':  0,
-    url:            ''
+    output:                 '',
+    width:                  800,
+    height:                 600,
+    timeout:                2000,
+    online:                 false,
+    'clip-top':             0,
+    'clip-left':            0,
+    'clip-width':           800,
+    'clip-height':          600,
+    'scroll-top':           0,
+    'scroll-left':          0,
+    url:                    '',
+    'ignore-ssl-errors':    'true'
 };
 var adapter = utils.Adapter('phantomjs');
 
@@ -194,7 +195,7 @@ function render(options, callback) {
                                     role:   'file',
                                     read:   true,
                                     write:  false,
-                                    desc:   'Can be accessed from web server under http://ip:8082/state/' + adapter.namespace + '.pictures.' + fileName
+                                    desc:   'Can be accessed from web server under http://ip:port/state/' + adapter.namespace + '.pictures.' + fileName
                                 },
                                 type: 'state',
                                 native: {
