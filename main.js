@@ -20,8 +20,7 @@ var settings = {
     'clip-height':          600,
     'scroll-top':           0,
     'scroll-left':          0,
-    url:                    '',
-    'ignore-ssl-errors':    'true'
+    url:                    ''
 };
 var adapter = utils.Adapter('phantomjs');
 

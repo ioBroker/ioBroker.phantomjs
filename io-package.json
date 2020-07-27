@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "phantomjs",
-        "version": "1.1.0",
+        "version": "1.1.1",
         "title": "Screenshots with PhantomJS",
         "titleLang": {
             "en": "Screenshots with PhantomJS",
@@ -15,6 +15,18 @@
             "pl": "Zrzut ekranu z PhantomJS"
         },
         "news": {
+            "1.1.1": {
+                "en": "ssl pages not supported, removed it again",
+                "de": "SSL-Seiten nicht unterstützt, entfernt es wieder",
+                "ru": "ssl-страницы не поддерживаются, снова удалили",
+                "pt": "páginas ssl não suportadas, removidas novamente",
+                "nl": "ssl-pagina's niet ondersteund, opnieuw verwijderd",
+                "fr": "pages ssl non prises en charge, supprimées à nouveau",
+                "it": "pagine ssl non supportate, rimosse di nuovo",
+                "es": "páginas ssl no compatibles, lo eliminó nuevamente",
+                "pl": "strony ssl nie są obsługiwane, usunąłem je ponownie",
+                "zh-cn": "ssl页面不受支持，请再次将其删除"
+            },
             "1.1.0": {
                 "en": "libfontconfig automatically installed , invalid/self signed certificates are ignored",
                 "de": "libfontconfig wird automatisch installiert, ungültige / selbstsignierte Zertifikate werden ignoriert",
