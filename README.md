@@ -116,6 +116,9 @@ You can read more about phantomJS [here](http://phantomjs.org/api/webpage/proper
 
 ## Changelog
 
+### 1.1.2 (2020-07-28)
+* (Apollon77) added ssl handling to ignore self signed ssl certificates
+
 ### 1.1.1 (2020-07-27)
 * (Apollon77) libfontconfig automatically installed
 

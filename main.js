@@ -140,7 +140,7 @@ function render(options, callback) {
     adapter.log.info('Create ' + options.width + 'px*' + options.height + 'px in ' + options.timeout + 'ms - "' + options.url + '" => "' + options.output + '"');
 
     // generate command
-    var cmd = [__dirname + '/lib/rasterize.js'];
+    var cmd = ['--ignore-ssl-errors=true', __dirname + '/lib/rasterize.js'];
     for (var attr in options) {
         if (options.hasOwnProperty(attr) && attr !== 'online') {
             if (attr === 'output') {

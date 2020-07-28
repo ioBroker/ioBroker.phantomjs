@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "phantomjs",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "title": "Screenshots with PhantomJS",
         "titleLang": {
             "en": "Screenshots with PhantomJS",
@@ -15,6 +15,18 @@
             "pl": "Zrzut ekranu z PhantomJS"
         },
         "news": {
+            "1.1.2": {
+                "en": "added ssl handling again, now working",
+                "de": "SSL-Handling wieder hinzugefügt, funktioniert jetzt",
+                "ru": "снова добавлена обработка ssl, теперь работает",
+                "pt": "adicionado manuseio de ssl novamente, agora trabalhando",
+                "nl": "ssl-afhandeling opnieuw toegevoegd, werkt nu",
+                "fr": "Ajout de la gestion SSL à nouveau, fonctionne maintenant",
+                "it": "aggiunta di nuovo la gestione ssl, ora funzionante",
+                "es": "Se agregó manejo de SSL nuevamente, ahora funciona",
+                "pl": "ponownie dodano obsługę ssl, teraz działa",
+                "zh-cn": "再次添加了ssl处理，现在可以使用"
+            },
             "1.1.1": {
                 "en": "ssl pages not supported, removed it again",
                 "de": "SSL-Seiten nicht unterstützt, entfernt es wieder",
