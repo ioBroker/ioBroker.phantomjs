@@ -29,13 +29,13 @@ describe('phantomjs: Test UDP server', function() {
     before('phantomjs: Start js-controller', function (_done) {
         this.timeout(600000); // because of first install from npm
 
-        setup.setupController(function () {
+        setup.setupController(async function () {
             var config = setup.getAdapterConfig();
             // enable adapter
             config.common.enabled   = true;
             config.common.loglevel  = 'debug';
 
-            setup.setAdapterConfig(config.common, config.native);
+            await setup.setAdapterConfig(config.common, config.native);
 
             setup.startController(function (_objects, _states) {
                 objects = _objects;
