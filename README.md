@@ -125,6 +125,9 @@ You can read more about phantomJS [here](http://phantomjs.org/api/webpage/proper
 
 ## Changelog
 
+### __WORK In PROGRESS__
+* (Apollon77) fix default values of some objects
+
 ### 1.1.2 (2020-07-28)
 * (Apollon77) added ssl handling to ignore self signed ssl certificates
 
@@ -157,7 +160,7 @@ You can read more about phantomJS [here](http://phantomjs.org/api/webpage/proper
 * (bluefox) initial commit
 
 ## License
-Copyright 2016-2020 bluefox <dogafox@gmail.com>.
+Copyright 2016-2022 bluefox <dogafox@gmail.com>.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

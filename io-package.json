@@ -113,7 +113,15 @@
             "linux": [
                 "libfontconfig"
             ]
-        }
+        },
+        "connectionType": "none",
+        "dataSource": "none",
+        "tier": 3,
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ]
     },
     "native": {},
     "instanceObjects": [
@@ -217,7 +225,7 @@
                 "type": "string",
                 "read": true,
                 "write": true,
-                "def": 0
+                "def": ""
             },
             "native": {}
         },
@@ -230,7 +238,7 @@
                 "type": "string",
                 "read": true,
                 "write": true,
-                "def": 0
+                "def": ""
             },
             "native": {}
         },
@@ -243,7 +251,7 @@
                 "type": "string",
                 "read": true,
                 "write": true,
-                "def": 0
+                "def": ""
             },
             "native": {}
         },
@@ -256,7 +264,7 @@
                 "type": "string",
                 "read": true,
                 "write": true,
-                "def": 0
+                "def": ""
             },
             "native": {}
         },
@@ -269,7 +277,7 @@
                 "type": "string",
                 "read": true,
                 "write": true,
-                "def": 0
+                "def": ""
             },
             "native": {}
         },
@@ -282,7 +290,7 @@
                 "type": "string",
                 "read": true,
                 "write": true,
-                "def": 0
+                "def": ""
             },
             "native": {}
         },
