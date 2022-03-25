@@ -185,6 +185,7 @@ function render(options, callback) {
                 var fileName = parts.pop().replace(/[.\s]/g, '_');
 
                 try {
+                    const setBinaryFunc = typeof adapter.setForeignBinaryState === 'function' ? adapter.setForeignBinaryState : adapter.setBinaryState;
                     var data = fs.readFileSync(options.output);
                     adapter.getObject('pictures.' + fileName, function (err, obj) {
                         if (!obj) {
@@ -203,7 +204,7 @@ function render(options, callback) {
                             });
                         }
                     });
-                    adapter.setBinaryState(adapter.namespace + '.pictures.' + fileName, data, function (err) {
+                    setBinaryFunc(adapter.namespace + '.pictures.' + fileName, data, function (err) {
                         if (err) adapter.log.error(err);
                         if (callback) {
                             callback(err, stdout, stderr);
