@@ -124,8 +124,7 @@ Supported dimension units are: 'mm', 'cm', 'in', 'px'. No unit means 'px'.
 You can read more about phantomJS [here](http://phantomjs.org/api/webpage/property/paper-size.html).
 
 ## Changelog
-
-### __WORK IN PROGRESS__
+### 1.1.3 (2022-03-26)
 * (Apollon77) fix default values of some objects
 
 ### 1.1.2 (2020-07-28)
