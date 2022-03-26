@@ -125,7 +125,7 @@ You can read more about phantomJS [here](http://phantomjs.org/api/webpage/proper
 
 ## Changelog
 
-### __WORK In PROGRESS__
+### __WORK IN PROGRESS__
 * (Apollon77) fix default values of some objects
 
 ### 1.1.2 (2020-07-28)
