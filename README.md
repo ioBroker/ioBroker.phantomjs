@@ -158,6 +158,8 @@ You can read more about phantomJS [here](http://phantomjs.org/api/webpage/proper
 ### 0.0.1 (2016-04-28)
 * (bluefox) initial commit
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 Copyright 2016-2022 bluefox <dogafox@gmail.com>.
 
