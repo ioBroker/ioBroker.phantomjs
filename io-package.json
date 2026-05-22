@@ -118,7 +118,6 @@
     "license": "Apache-2.0",
     "enabled": true,
     "type": "utility",
-    "noConfig": true,
     "messagebox": true,
     "subscribe": "messagebox",
     "osDependencies": {
@@ -131,9 +130,12 @@
     "tier": 3,
     "dependencies": [
       {
-        "js-controller": ">=2.0.0"
+        "js-controller": ">=6.0.11"
       }
-    ]
+    ],
+    "adminUI": {
+      "config": "none"
+    }
   },
   "native": {},
   "instanceObjects": [
