@@ -120,7 +120,6 @@
     },
     "enabled": true,
     "type": "utility",
-    "noConfig": true,
     "messagebox": true,
     "subscribe": "messagebox",
     "osDependencies": {
@@ -135,7 +134,10 @@
       {
         "js-controller": ">=6.0.11"
       }
-    ]
+    ],
+    "adminUI": {
+      "config": "none"
+    }
   },
   "native": {},
   "instanceObjects": [
