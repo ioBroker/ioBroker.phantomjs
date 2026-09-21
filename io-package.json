@@ -115,7 +115,10 @@
       "phantomjs"
     ],
     "readme": "https://github.com/iobroker/ioBroker.phantomjs/blob/master/README.md",
-    "license": "Apache-2.0",
+    "licenseInformation": {
+      "type": "free",
+      "license": "Apache-2.0"
+    },
     "enabled": true,
     "type": "utility",
     "noConfig": true,
