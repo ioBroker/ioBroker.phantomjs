@@ -3,9 +3,9 @@
 'use strict';
 
 var utils = require('@iobroker/adapter-core'); // Get common adapter utils
-var path      = require('path');
-var fs        = require('fs');
-var cp        = require('child_process');
+var path      = require('node:path');
+var fs        = require('node:fs');
+var cp        = require('node:child_process');
 var phantomjs = require('phantomjs-prebuilt');
 
 var settings = {
